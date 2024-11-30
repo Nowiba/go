@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forgot Password</title>
+    <link rel="stylesheet" href="forgetpass.css">
+</head>
+<body>
+
+<!-- Language Switcher Button (Dropdown) -->
+<div class="language-switcher">
+    <button class="lang-btn" id="lang-btn">Language</button>
+    <div class="dropdown-content">
+        <a href="#" id="english-btn">English</a>
+        <a href="#" id="french-btn">Français</a>
+        <a href="#" id="arabic-btn">العربية</a>
+    </div>
+</div>
+
+    <div class="wrapper">
+        <!-- Left Animated Section -->
+        <div class="left-side">
+            <div class="left-content">
+                <h1 id="welcome-title">Welcome Back!</h1>
+                <p id="reset-text">Reset your password to continue.</p>
+            </div>
+        </div>
+
+        <!-- Main Content Section -->
+        <div class="main-content">
+            <div class="container">
+                <h2 id="forgot-password-title">Forgot Password</h2>
+                <form id="forgot-password-form">
+                    <!-- Email Input -->
+                    <input type="email" id="email" placeholder="Enter your email" required>
+
+                    <!-- Birthdate Section (auto-moving) -->
+                    <div class="birthdate-section">
+                        <input type="text" id="year" placeholder="YYYY" maxlength="4" required oninput="moveFocus('year', 'month')">
+                        <input type="text" id="month" placeholder="MM" maxlength="2" required oninput="moveFocus('month', 'day')">
+                        <input type="text" id="day" placeholder="DD" maxlength="2" required oninput="moveFocus('day', 'new-password')">
+                    </div>
+
+                    <!-- New Password Input -->
+                    <input type="password" id="new-password" placeholder="Enter new password" required>
+
+                    <!-- Confirm New Password Input -->
+                    <input type="password" id="confirm-new-password" placeholder="Confirm new password" required>
+
+                    <!-- Submit Button -->
+                    <button type="submit" id="reset-password-button">Reset Password</button>
+
+                    <!-- Error Message -->
+                    <div id="error-message" style="color: red; display: none;"></div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Right Animated Section with clickable image -->
+        <div class="right-side">
+            <div class="right-content">
+                <!-- Add a link to make the image clickable -->
+                <a href="https://en.wikipedia.org/wiki/Crime_Life:_Gang_Wars" target="_blank">
+                    <img src="img1.jpg" alt="Logo">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="forgetpass.js"></script>
+</body>
+</html>

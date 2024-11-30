@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <header>
+        <!-- Hamburger Menu Icon (three horizontal lines) -->
+        <div class="hamburger-menu" id="hamburger-menu">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+
+        <!-- Top Right Buttons -->
+        <div class="top-right-buttons">
+            <button id="settings-button" class="settings-btn">
+                <img src="settings.png" alt="Settings Icon">
+            </button>
+        </div>
+    </header>
+
+ <!-- Slide Menu -->
+<div class="slide-menu" id="slide-menu">
+    <!-- Cancel button to close the menu -->
+    <button class="cancel-btn" id="cancel-btn"><i>X</i></button>
+    
+    <!-- Menu Options (No anchor tags) -->
+    <button class="menu-btn" id="ORDINATEUR"><b>ORDINATEUR</b></button>
+    <button class="menu-btn" id="PC PORTABLE"><B>PC PORTABLE</B></button>
+    <button class="menu-btn" id="COMPOSANTS"><B>COMPOSANTS</B></button>
+    <button class="menu-btn" id="ECRANS"><B>ECRANS</B></button>
+</div>
+
+    <script>
+   // Toggle the slide menu visibility on hamburger click
+document.getElementById('hamburger-menu').addEventListener('click', function() {
+    document.getElementById('slide-menu').classList.toggle('open');
+});
+
+// Close the slide menu when the cancel button is clicked
+document.getElementById('cancel-btn').addEventListener('click', function() {
+    document.getElementById('slide-menu').classList.remove('open');
+});
+
+// Redirect to different pages when options are clicked
+document.getElementById('ORDINATEUR').addEventListener('click', function() {
+    window.location.href = 'ORDINATEUR.html';  // Change this to your desired URL
+});
+
+document.getElementById('PC PORTABLE').addEventListener('click', function() {
+    window.location.href = 'page2.html';  // Change this to your desired URL
+});
+
+document.getElementById('COMPOSANTS').addEventListener('click', function() {
+    window.location.href = 'page3.html';  // Change this to your desired URL
+});
+
+document.getElementById('ECRANS').addEventListener('click', function() {
+    window.location.href = 'page4.html';  // Change this to your desired URL
+});
+
+    </script>
+

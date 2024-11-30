@@ -1,0 +1,309 @@
+/* main.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Profile Display Section */
+.profile-display {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center align photo and name */
+    text-align: center;
+}
+
+#main-profile-pic {
+    width: 50px; /* Slightly larger for better visibility */
+    height: 50px;
+    border-radius: 50%; /* Circular profile picture */
+    margin-top: -90px; /* Space between photo and name */
+    border: 1px solid #007bff; /* Blue border for emphasis */
+    margin-left: -15px;
+}
+#main-user-name {
+    font-size: 20px;
+    font-weight: bolder;
+    color: #333; /* Darker text color for better readability */
+    margin: 0px; /* No extra spacing around the name */
+    text-transform: capitalize; /* Automatically capitalize the name */
+}
+
+/* Top Right Buttons */
+.top-right-buttons {
+    display: flex;
+    align-items: center;
+}
+
+/* Logout Button */
+.logout-btn {
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #ff0000;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-right: 10px;
+    margin-bottom: 100px;
+}
+
+.logout-btn:hover {
+    background-color: #000000;
+}
+
+/* Settings Button Styling */
+.settings-btn {
+    background-color: #007bff; /* Blue background */
+    border: none;
+    border-radius: 50%; /* Circular button */
+    padding: 15px; /* Adequate padding for a good clickable area */
+    cursor: pointer;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    width: 50px;
+    height: 50px;
+    margin-bottom: 100px;
+}
+
+.settings-btn img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect for settings button */
+.settings-btn:hover {
+    transform: scale(1.1); /* Slightly enlarge the button */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* Add shadow on hover */
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Rotate the icon when hovering */
+.settings-btn:hover img {
+    transform: rotate(45deg);
+}
+
+/* Focus state for accessibility */
+.settings-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.5);
+}
+
+/* Main Section */
+main {
+    padding: 20px;
+    text-align: center;
+}     
+
+
+
+                                      /* New Code */ 
+
+
+/* Dropdown Menu */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+.dropdown-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.dropdown-btn:hover {
+    background-color: #0056b3;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content button {
+    background-color: white;
+    color: black;
+    padding: 12px 16px;
+    text-align: left;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+.dropdown-content button:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+/* Hamburger Menu Button */
+.hamburger-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 30px; /* Adjust width */
+    height: 30px; /* Adjust height */
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out; /* Animation for the transform effect */
+}
+
+.hamburger-menu .line {
+    width: 30px; /* Line width */
+    height: 4px; /* Line height */
+    background-color: #007bff; /* Custom color */
+    border-radius: 5px; /* Rounded corners for lines */
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Slide Menu Styles */
+.slide-menu {
+    position: fixed;
+    top: 0;
+    left: -350px; /* Initially hidden off-screen to the left */
+    width: 350px; /* Wider slide menu */
+    height: 100%;
+    background-color: white; /* White background for the slide */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    transition: left 0.3s ease-in-out; /* Sliding effect */
+}
+
+.slide-menu.open {
+    left: 0; /* Slide in when 'open' class is added */
+}
+
+/* Cancel Button (Top right to close the slide) */
+.cancel-btn {
+    background: none;
+    color: black; /* Black color for the cancel button */
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-weight: bold;
+}
+
+/* Cancel button hover effect */
+.cancel-btn:hover {
+    color: rgb(0, 0, 0); /* Change color on hover */
+  
+}
+
+/* Adjusting space between Cancel Button and Options */
+.slide-menu .menu-btn {
+    margin-top: 15%; /* Adds 10px space between cancel button and the options */
+    
+}
+
+
+
+/* Menu Buttons (Option 1, Option 2, etc.) */
+.menu-btn {
+    color: black; /* Text color for the buttons */
+    background: none; /* No background color */
+    border: none; /* No border */
+    padding: 8px 20px; /* Reduced padding to make the buttons smaller */
+    width: 100%;
+    text-align: left; /* Align the text to the left */
+    font-size: 14px; /* Reduced font size */
+    cursor: pointer;
+    margin: 10px 0px; /* Adjust margin to move buttons down */
+    text-decoration: none; /* Remove underline from the text */
+}
+
+/* Remove background and hover effects for menu buttons */
+.menu-btn:hover {
+    background: none;
+    color: black; /* Keep the color black on hover */
+}
+
+/* Top Right Buttons */
+.top-right-buttons {
+    display: flex;
+    align-items: center;
+}
+
+/* Settings Button Styling */
+.settings-btn {
+    background-color: #007bff; /* Blue background */
+    border: none;
+    border-radius: 50%; /* Circular button */
+    padding: 15px; /* Adequate padding for a good clickable area */
+    cursor: pointer;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    width: 50px;
+    height: 50px;
+}
+
+.settings-btn img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Hover effect for settings button */
+.settings-btn:hover {
+    transform: scale(1.1); /* Slightly enlarge the button */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* Add shadow on hover */
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Rotate the icon when hovering */
+.settings-btn:hover img {
+    transform: rotate(45deg);
+}
+
+/* Focus state for accessibility */
+.settings-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.5);
+}
+

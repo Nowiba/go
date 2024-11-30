@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create New Account</title>
+    <link rel="stylesheet" href="signup.css"> <!-- Link to CSS file -->
+</head>
+<body>
+    <!-- Language Switcher -->
+    <div class="language-switch-container">
+        <select id="language-select" onchange="switchLanguage()">
+            <option value="en" selected>English</option>
+            <option value="fr">Français</option>
+            <option value="ar">العربية</option>
+        </select>
+    </div>
+
+    <!-- Form Section -->
+    <div class="container">
+        <div class="logo">
+            <img src="img1.jpg" alt="Information Project Logo" class="circular-img">
+        </div>
+        <h1 id="create-title">Create New Account</h1>
+
+        <!-- Register Form -->
+        <form id="register-form">
+            <input type="text" id="firstName" placeholder="First Name" required>
+            <input type="text" id="lastName" placeholder="Last Name" required>
+
+            <!-- Birth Date Section -->
+            <div class="birthdate-section">
+                <input type="number" id="year" placeholder="YYYY" maxlength="4" required oninput="moveFocus('year', 'month')">
+                <input type="number" id="month" placeholder="MM" maxlength="2" required oninput="moveFocus('month', 'day')">
+                <input type="number" id="day" placeholder="DD" maxlength="2" required oninput="moveFocus('day', 'email')">
+            </div>
+
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+
+            <!-- Register Button -->
+            <button type="submit" id="register-button" class="register-button">Register</button>
+
+            <!-- Error/Success Message -->
+            <div id="register-message" style="display: none; margin-top: 10px; color: red;"></div>
+        </form>
+    </div>
+
+    <script src="signup.js"></script> <!-- Link to JS file -->
+</body>
+</html>

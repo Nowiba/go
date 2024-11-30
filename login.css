@@ -1,0 +1,127 @@
+/* General Styling for the Login Page */
+body.login-page {
+    background-color: #f0f2f5;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Container for the login form */
+.login-page .container {
+    background-color: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 400px;
+}
+
+/* Logo Styling */
+.login-page .logo img {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+/* Language Switcher Positioning */
+.login-page .language-switch-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.login-page .language-switch-container select {
+    background-color: black;
+    color: #ffffff;
+    border: 1px solid #000000;
+    border-radius: 4px;
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Form Input Fields */
+.login-page form input {
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    width: calc(100% - 20px);
+    box-sizing: border-box;
+}
+
+/* Warning and Error Messages */
+.warning-message {
+    font-size: 14px;
+    color: white;
+    background-color: #ff273d;
+    border: 1px solid #ff273d;
+    border-radius: 4px;
+    padding: 8px;
+    margin: 5px 0;
+    display: none;
+}
+
+/* Password Visibility Toggle */
+.login-page .password-container {
+    position: relative;
+    width: 100%;
+}
+
+.login-page .password-container button {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #1877f2;
+    cursor: pointer;
+}
+
+/* Submit Buttons */
+.login-page button.dark-button {
+    background-color: #000000;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Button Hover Effect */
+.login-page button.dark-button:hover {
+    background-color: #333;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 500px) {
+    .login-page .container {
+        width: 90%;
+        padding: 20px;
+    }
+}
+
+/* Styling for Links */
+.login-page a {
+    display: block;
+    text-decoration: none;
+    color: #1877f2;
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.login-page a:hover {
+    text-decoration: underline;
+}
+

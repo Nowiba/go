@@ -1,0 +1,108 @@
+/* Global Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 400px;
+}
+
+.logo img {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+/* Language Switcher */
+.language-switch-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.language-switch-container select {
+    background-color: black;
+    color: #ffffff;
+    border: 1px solid #000000;
+    border-radius: 4px;
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Form Inputs */
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+input:focus {
+    outline: none;
+    border-color: #0056b3;
+}
+
+/* Styling for Birthdate Section */
+.birthdate-section {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.birthdate-section input {
+    width: 30%;
+    margin: 0 5px;
+}
+
+.birthdate-section input:focus {
+    outline: none;
+    border-color: #0056b3;
+}
+
+/* Submit Button */
+.register-button {
+    background-color: black;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.register-button:hover {
+    background-color: #333;
+}
+
+/* Styling for placeholders */
+input::placeholder {
+    color: #888;
+}
+
+/* Responsive Layout */
+@media (max-width: 500px) {
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+}
+
